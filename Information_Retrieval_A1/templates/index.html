@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel= "stylesheet" href= "{{ url_for('static',filename='css/index.css') }}">
+    </head>
+    <body>
+        <div class="main">
+            <form method="POST" action="/results">
+                <div>
+                <a href="/"><h1 class = "heading">World Cric Web</h1></a>
+                </div>
+                    <div class="search">
+                        <div class="componets">
+                            <div>
+                                <input type="text" name="query" id="query" class="input" placeholder="Enter Query" required>
+                            </div>
+                    </div>
+                </form>
+                <div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

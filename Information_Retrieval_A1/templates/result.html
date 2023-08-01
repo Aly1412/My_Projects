@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel= "stylesheet" href= "{{ url_for('static',filename='css/result.css') }}">
+    </head>
+    <body>
+        <div>
+        <form method="POST" action="/results">
+            <div class="flex-search">
+                <div class="heading"><a href="/"><h1 class = "heading">World Cric Web</h1></a></div>
+                <div class="input"><input type="text" name="query" id="query" class="query" placeholder="Type Query" required></div>
+            </div>
+        </form>
+        </div>
+        
+        <div class="resultDiv">
+            {% if tasks[0] != "error" %}
+            <h3>Showing result for "{{tasks[2]}}"</h3>
+            {% if tasks[1] != -1 %}
+                <h4>Query Processing cost = {{tasks[1]}}</h4>
+            {% endif %}
+            <div class="flex-container">
+                {% for task in tasks[0] %}
+                <div class="card">
+                    <div class="container">
+                        <h3 class="cardText">{{task}}</h3>
+                    </div>
+                    <button>
+                        <a href="/View_Doc/{{task}}" target="_blank">
+                            View Document
+                        </a>
+                    </button>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <h3>Error while searching "{{tasks[1]}}", please try again</h3>
+            {% endif %}
+        </div>
+    </body>
+</html>
