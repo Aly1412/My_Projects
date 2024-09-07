@@ -1,0 +1,52 @@
+Things to be consider of for selfawarness:
+1.activity 
+2.external factors(weather,humidity)
+3.situation awarness
+============================================================================
+
+Male
+20<age<30
+temp = 36.27+-0.99 = [35.28,37.26]
+bp = [90/60,120/80]
+heart rate = 81 = [60,100]
+
+Assumption (for dataset):
+temp = 36.27
+bp = 110/70
+heart rate = 81
+
+
+daily variations:
+temp = 0.25-0.5
+bp = increase during morning and decrease during afternoon and night by 10%
+  
+
+Effects of external factors:
+1.air temperature
+tm>35:
+temp = 0.5 increase
+30<tm<35:
+temp = 0.25 increase
+25<tm<30:
+temp = 0.25 increase
+tm<25:
+temp = 0.5 decrease
+
+1.activity(sitting,walking)
+during walk:
+bp sys = 4.11 decreases
+bp dias = 1.79 decreases
+temp = 0.5 increase
+heart rate = 60% increase
+
+during sit:
+bp sys = 5% decreases (not specified how much) 
+bp dias = 5% decreases (not specified how much)
+temp = no change in avg
+heart rate = 7%, [5%-10%] decrease
+
+during sleep:
+bp sys = 10%,[10%-20%] decrease
+bp dias = 10%,[10%-20%] decrease
+temp = -0.75
+heart rate = 20% decrease
